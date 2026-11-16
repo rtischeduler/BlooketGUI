@@ -15,12 +15,12 @@ A single page, no build step. Open it and it loads the real Blooket full screen.
 Near the top of the page script:
 
 ```js
-const INJECT_URL = "https://example.com/PLACEHOLDER.js";
+const INJECT_URL = "https://gitlab.com/blooket/blooket-cheats/-/raw/c322469ebbd192b6731480af76b1ac0a3d4a7b22/cheats/gui.js";
 ```
 
-Replace it with your script's URL. After every page load the script is downloaded **through the proxy** (so CORS is not an issue) and run in the proxied page with `main_frame.eval_js(code)`. That is the same call behind the console run bar in Singuloxy's example frontend: it rewrites the code and does an indirect `eval` in the page's global scope.
+It currently points at `cheats/gui.js` from `gitlab.com/blooket/blooket-cheats`, pinned to commit `c322469`. Replace it with any other script URL. After every page load the script is downloaded **through the proxy** (so CORS is not an issue) and run in the proxied page with `main_frame.eval_js(code)`. That is the same call behind the console run bar in Singuloxy's example frontend: it rewrites the code and does an indirect `eval` in the page's global scope.
 
-- While `INJECT_URL` is still the placeholder, nothing is injected.
+- If `INJECT_URL` is set back to `https://example.com/PLACEHOLDER.js`, nothing is injected.
 - The downloaded code is cached and re-run on each full page load. In-app (SPA) route changes keep the page alive, so it is not re-run for those.
 - Failures show a toast; details are in the console.
 

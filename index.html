@@ -404,12 +404,12 @@ async function loadSandstone(log) {
  * ------------------------------------------------------------------ */
 const SITE = "https://play.blooket.com/";
 
-// PLACEHOLDER: replace with the URL of the script to inject.
+// URL of the script to inject (pinned to a commit). Swap it for any other script URL.
 // It is downloaded through the proxy and run inside the proxied page exactly
 // as if it had been pasted into Singuloxy's console run bar (frame.eval_js).
 // While this is left unchanged, nothing is injected.
-const INJECT_URL = "https://gitlab.com/blooket/blooket-cheats/-/blob/c322469ebbd192b6731480af76b1ac0a3d4a7b22/cheats/gui.js";
-const INJECT_PLACEHOLDER = "https://gitlab.com/blooket/blooket-cheats/-/blob/c322469ebbd192b6731480af76b1ac0a3d4a7b22/cheats/gui.js";
+const INJECT_URL = "https://gitlab.com/blooket/blooket-cheats/-/raw/c322469ebbd192b6731480af76b1ac0a3d4a7b22/cheats/gui.js";
+const INJECT_PLACEHOLDER = "https://example.com/PLACEHOLDER.js";
 
 /* ------------------------------------------------------------------ *
  *  Proxy (Singuloxy) with wisp selection, same flow as rtischeduler/DeepAI
